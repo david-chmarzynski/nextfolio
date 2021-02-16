@@ -21,7 +21,6 @@ export const handleProject = (messengerBackground, target, link, description) =>
   });
   gsap.to(description, {
     duration: 0,
-    delay: 0.5,
     opacity: 1
   });
 };
@@ -40,3 +39,46 @@ export const handleProjectReturn = (target, link, description) => {
     opacity: 0
   });
 };
+
+export const fadeInMessenger = (messenger) => {
+  gsap.from(messenger, {
+    duration: 0.3,
+    delay: 0.55,
+    opacity: 0
+  });
+};
+
+export const fadeInLocalDrive = (localDrive) => {
+  gsap.from(localDrive, {
+    duration: 0.3,
+    delay: 0.75,
+    opacity: 0
+  });
+};
+
+export const backgroundSize = (div) => {
+  gsap.to(div, {
+    duration: .3,
+    delay: 1,
+    backgroundSize: "100% 100%"
+  });
+};
+
+export const backgroundShadow = (div) => {
+  gsap.from(div, {
+    delay: 1.3,
+    duration: 0.3,
+    boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0.5)"
+  });
+}; 
+
+// gsap.from(project, {
+//   delay: 1,
+//   duration: 0.3,
+//   backgroundSize: "0% 0%"
+// });
+// gsap.from(project, {
+//   duration: 0.3,
+//   delay: 1.5,
+//   boxShadow: "0px 0px 0px 0px #D82222"
+// });

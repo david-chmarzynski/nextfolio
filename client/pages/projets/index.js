@@ -3,7 +3,7 @@ import styles from '../../styles/Projet.module.scss';
 
 // IMPORT GSAP & ANIMATIONS
 import { gsap } from 'gsap';
-import { handleProject, handleProjectReturn } from '../../animations/Projet.animation';
+import { handleProject, handleProjectReturn, fadeInMessenger, fadeInLocalDrive, backgroundSize, backgroundShadow } from '../../animations/Projet.animation';
 
 // IMAGES
 const messengerBackground = '/images/messenger-shot2.png';
@@ -16,10 +16,17 @@ export default function Projets() {
   let background = useRef(null);
   let description1 = useRef(null);
   let description2 = useRef(null);
+  let title1 = useRef(null);
+  let title2 = useRef(null);
 
   // ON MOUNT
   useEffect(() => {
-
+    fadeInMessenger(title1);
+    backgroundSize(messenger);
+    backgroundShadow(messenger);
+    fadeInLocalDrive(title2);
+    backgroundSize(localDrive);
+    backgroundShadow(localDrive);
   }, []);
   return (
     <>
@@ -33,11 +40,12 @@ export default function Projets() {
                   <a 
                     href="https://messenger-new.herokuapp.com/"
                     target="_blank"
+                    ref={el => (title1 = el)}
                     className={styles.li}
                     onMouseEnter={() => handleProject(messengerBackground, background, localDrive, description1)}
                     onMouseOut={() => handleProjectReturn(background, localDrive, description1)}
                   >
-                  Messenger.
+                    Messenger.
                   </a>
                 </li>
                 <span className={styles.description} ref={el => (description1 = el)}>
@@ -53,6 +61,7 @@ export default function Projets() {
                   <a
                     href=""
                     target="_blank"
+                    ref={el => (title2 = el)}
                     className={styles.li}
                     onMouseEnter={() => handleProject(localDriveBackground, background, messenger, description2)}
                     onMouseOut={() => handleProjectReturn(background, messenger, description2)}
