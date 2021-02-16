@@ -1,0 +1,126 @@
+$green: #03B5AA;
+$black: #2E2E3A;
+$white: #FFFFFF;
+$red: #D82222;
+$grey: #818181;
+
+
+.contact {
+  background: $black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: $white;
+}
+
+.wrapper {
+  margin: auto;
+  margin-top: 12rem;
+  display: flex;
+  height: 70%;
+  width: 50%;
+  justify-content: center;
+  border: 7px solid $white;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: -50px;
+  background-color: #2E2E3A;
+  padding: 0 20px;
+}
+
+.form {
+  width: 70%;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 40%;
+  margin: auto;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 5px solid white;
+  color: #FFF;
+  font-size: 1.3rem;
+
+
+  &::placeholder {
+    color: $grey;
+    text-transform: uppercase;
+  }
+}
+
+.button {
+  max-width: 30%;
+  margin: auto;
+  background-color: transparent;
+  border: 3px solid $white;
+  color: $white;
+  padding: 12px 30px;
+  font-weight: 800;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    background-color: $red;
+    border: none;
+    border: 3px solid $white;
+    outline: none;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.pin {
+  color: $white;
+  position: absolute;
+  right: 0;
+  font-size: 1.3rem;
+  top: 50%;
+  transform: rotate(90deg);
+  background: linear-gradient(to top, $red 0%, $red 50%, transparent 50%) no-repeat left bottom / 0 100%;
+  background-size: 100% 100%;
+  box-shadow: 7px 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 870px) {
+  .form {
+    width: 100%;
+  }
+  .title {
+    font-size: 1.2rem;
+    top: -30px;
+  }
+  .wrapper {
+    width: 100%;
+    margin-top: 10rem;
+  }
+  .input {
+    font-size: .8rem;
+    width: 80%;
+    border-bottom: 2px solid white;
+
+  }
+  .button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .pin { 
+    display: none;
+  }
+  .wrapper {
+    width: 90%;
+  }
+}
