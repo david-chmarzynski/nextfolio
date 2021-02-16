@@ -14,6 +14,16 @@ $red: #D82222;
       padding: 0 48px;
     }
   }
+
+  @media (max-width: 870px) {
+    .container {
+      width: 100%;
+
+      .wrapper {
+        padding: 5px;
+      }
+    }
+  }
   .innerHeader {
     position: relative;
     z-index: 10;
@@ -32,6 +42,10 @@ $red: #D82222;
         cursor: pointer;
         font-size: 2rem;
         color: $white;
+      }
+      .svg {
+        color: $white;
+        font-size: 1.4rem;
       }
     }
   }

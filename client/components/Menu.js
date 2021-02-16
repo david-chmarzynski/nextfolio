@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/Menu.module.scss';
 import { useRef, useEffect } from 'react';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 
 // IMPORT GSAP & ANIMATIONS
 import { gsap } from 'gsap';
@@ -83,6 +84,10 @@ export default function Menu({ state, setState }) {
               </nav>
             </div>
           </div>
+          <footer className={styles.footer}>
+            <GithubOutlined />
+            <LinkedinOutlined />
+          </footer>
         </div>
       </div>
     </div>
