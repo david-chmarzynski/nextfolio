@@ -1,0 +1,38 @@
+$green: #03B5AA;
+$black: #2E2E3A;
+$white: #FFFFFF;
+$red: #D82222;
+
+.header {
+  height: 100px;
+  .container {
+    width: 60%;
+    min-width: 60%;
+    margin: 0 auto;
+  
+    .wrapper {
+      padding: 0 48px;
+    }
+  }
+  .innerHeader {
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .a {
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      color: $white;
+    }
+    .close {
+      .button {
+        cursor: pointer;
+        font-size: 2rem;
+        color: $white;
+      }
+    }
+  }
+}
