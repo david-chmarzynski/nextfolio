@@ -3,6 +3,22 @@ $black: #2E2E3A;
 $white: #FFFFFF;
 $red: #D82222;
 
+.background {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: backgroundEffect;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
 .container {
   width: 60%;
   min-width: 60%;
@@ -61,5 +77,60 @@ $red: #D82222;
         }
       }
     }
+  }
+}
+
+
+.description {
+  position: absolute;
+  top: 150px;
+  left: 22%;
+  max-width: 350px;
+  height: auto;
+  opacity: 0;
+
+  .h3 {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .p {
+    color: $white;
+  }
+}
+
+.descriptionLD {
+  position: absolute;
+  top: 260px;
+  left: 22%;
+  max-width: 350px;
+  height: auto;
+  opacity: 0;
+
+  .h3LD {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .pLD {
+    color: $white;
+  }
+}
+
+@keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
