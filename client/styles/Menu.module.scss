@@ -6,7 +6,7 @@ $red: #D82222;
 .container {
   width: 60%;
   min-width: 60%;
-  margin: 5rem auto;
+  margin: 10rem auto;
 
   .wrapper {
     padding: 0 48px;
@@ -23,7 +23,7 @@ $red: #D82222;
   height: 100%;
   width: 100%;
 
-  .secondaryBackgroundColor {
+  .secondaryBackground {
     background: $black;
     top: 0;
     left: 0;
@@ -37,9 +37,10 @@ $red: #D82222;
 
   .menuLayer {
     position: relative;
-    background: $red;
+    background: #D82222;
     height: 100%;
     overflow: hidden;
+
 
     .wrapper {
       position: relative;
@@ -71,6 +72,7 @@ $red: #D82222;
                 position: absolute;
                 color: #FFF;
                 text-decoration: none;
+
                 &:hover {
                   color: $black;
                 }
