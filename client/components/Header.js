@@ -2,13 +2,15 @@ import Link from 'next/link';
 import styles from '../styles/Header.module.scss';
 import { CloseOutlined } from '@ant-design/icons';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Header({ state, setState }) {
+  let router = useRouter();
   useEffect(() => {
-    if(window.location.pathname !== "/") {
+    if(router.pathname !== "/") {
       setState({ deployed: false, clicked: null, menu: "Closed"})
     }
-  }, []);
+  }, [router]);
   return (
     <header className={styles.header}>
       <div className={styles.container}>

@@ -42,8 +42,8 @@ export default function Projets() {
                     target="_blank"
                     ref={el => (title1 = el)}
                     className={styles.a}
-                    onMouseEnter={() => handleProject(messengerBackground, background, localDrive, description1, messenger)}
-                    onMouseOut={() => handleProjectReturn(background, localDrive, description1, messenger)}
+                    onMouseEnter={() => handleProject(messengerBackground, background, localDrive, description1)}
+                    onMouseOut={() => handleProjectReturn(background, localDrive, description1)}
                   >
                     Messenger.
                   </a>
@@ -63,8 +63,8 @@ export default function Projets() {
                     target="_blank"
                     ref={el => (title2 = el)}
                     className={styles.a}
-                    onMouseEnter={() => handleProject(localDriveBackground, background, messenger, description2, localDrive)}
-                    onMouseOut={() => handleProjectReturn(background, messenger, description2, localDrive)}
+                    onMouseEnter={() => handleProject(localDriveBackground, background, messenger, description2)}
+                    onMouseOut={() => handleProjectReturn(background, messenger, description2)}
                   >
                     Local Drive.
                   </a>

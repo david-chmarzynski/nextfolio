@@ -18,10 +18,10 @@ export default function Menu({ state, setState }) {
 
   // ON MOUNT
   useEffect(() => {
-    if(state.deployed === false) {
+    if(!state.deployed) {
       staggerRevealClose(reveal2, reveal1);
       gsap.to(menulayer, { duration: 1, css: { display: "none" } });
-    } else if(state.deployed === true) {
+    } else if(state.deployed) {
       gsap.to(menulayer, { duration: 0, css: { display: "block" } });
       gsap.to([reveal1, reveal2], {
         duration: 0,

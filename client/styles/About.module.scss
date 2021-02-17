@@ -90,6 +90,7 @@ $grey: #818181;
   background: linear-gradient(to top, $red 0%, $red 40%, transparent 40.01%) no-repeat left bottom / 0 100%;
   background-size: 100% 100%;
   box-shadow: 0px 15px 6px -10px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
 }
 
 @media (max-width: 1900px) {
@@ -101,5 +102,9 @@ $grey: #818181;
 @media (max-width: 1350px) {
   .container {
     width: 100%;
+  }
+
+  .title {
+    font-size: 1rem;
   }
 }
