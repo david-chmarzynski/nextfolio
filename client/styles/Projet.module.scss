@@ -21,10 +21,12 @@ $red: #D82222;
 
 .container {
   width: 60%;
-  min-width: 60%;
-  margin: 10rem auto;
+  height: calc(100vh - 100px);
+  margin: 100px auto;
   .wrapper {
     padding: 0 48px;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -33,7 +35,7 @@ $red: #D82222;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  top: 200px;
+  height: 60%;
 
   .nav {
     display: block;
@@ -44,50 +46,51 @@ $red: #D82222;
 
       .li {
         list-style: none;
-        font-size: 6rem;
+        font-size: 8vw;
         font-weight: 700;
         cursor: pointer;
-        height: 135px;
-        overflow: hidden;
-        position: relative;
+        height: 160px;
         color: #FFF;
         text-decoration: none;
-        background: linear-gradient(to top, $red 0%, $red 30%, transparent 20.01%) no-repeat left bottom / 0 100%;
-        background-size: 0% 0%;
-        box-shadow: 0px 15px 6px -10px rgba(0, 0, 0, 0.5);
-        transition: .3s;
 
-        &:hover {
-          box-shadow: 0px 15px 6px -5px rgba(0, 0, 0, 0.5);
+        .a {
+          background: linear-gradient(to top, $red 0%, $red 30%, transparent 20.01%) no-repeat left bottom / 0 100%;
+          background-size: 0% 0%;
+          box-shadow: 0px 15px 6px -10px rgba(0, 0, 0, 0.5);
           transition: .3s;
         }
-      }
 
 
-      @media (max-width: 870px) {
-        .nav {
-          display: flex;
-          flex-direction: column;
-        }
-        .li {
-          font-size: 9vh;
-        }
-        .a {
-          position: relative;
+        .a:hover {
+          box-shadow: 0px 15px 6px -5px rgba(0, 0, 0, 0.5) !important;
+          transition: .3s;
         }
       }
     }
   }
 }
 
+@media (min-width: 1440px) {
+  .li {
+    font-size: 7rem !important;
+  }
+}
+
+@media (max-height: 830px) {
+  .li {
+    font-size: 8vh !important;
+  }
+}
+
 
 .description {
   position: absolute;
-  top: 150px;
+  top: 50%;
   left: 22%;
   max-width: 350px;
-  height: auto;
+  height: 25%;
   opacity: 0;
+  display: none;
 
   .h3 {
     color: $white;
@@ -101,11 +104,12 @@ $red: #D82222;
 
 .descriptionLD {
   position: absolute;
-  top: 260px;
+  top: 80%;
   left: 22%;
   max-width: 350px;
-  height: auto;
+  height: 25%;
   opacity: 0;
+  display: none;
 
   .h3LD {
     color: $white;

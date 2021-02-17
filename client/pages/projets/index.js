@@ -22,11 +22,11 @@ export default function Projets() {
   // ON MOUNT
   useEffect(() => {
     fadeInMessenger(title1);
-    backgroundSize(messenger);
-    backgroundShadow(messenger);
+    backgroundSize(title1);
+    backgroundShadow(title1);
     fadeInLocalDrive(title2);
-    backgroundSize(localDrive);
-    backgroundShadow(localDrive);
+    backgroundSize(title2);
+    backgroundShadow(title2);
   }, []);
   return (
     <>
@@ -41,9 +41,9 @@ export default function Projets() {
                     href="https://messenger-new.herokuapp.com/"
                     target="_blank"
                     ref={el => (title1 = el)}
-                    className={styles.li}
-                    onMouseEnter={() => handleProject(messengerBackground, background, localDrive, description1)}
-                    onMouseOut={() => handleProjectReturn(background, localDrive, description1)}
+                    className={styles.a}
+                    onMouseEnter={() => handleProject(messengerBackground, background, localDrive, description1, messenger)}
+                    onMouseOut={() => handleProjectReturn(background, localDrive, description1, messenger)}
                   >
                     Messenger.
                   </a>
@@ -62,9 +62,9 @@ export default function Projets() {
                     href=""
                     target="_blank"
                     ref={el => (title2 = el)}
-                    className={styles.li}
-                    onMouseEnter={() => handleProject(localDriveBackground, background, messenger, description2)}
-                    onMouseOut={() => handleProjectReturn(background, messenger, description2)}
+                    className={styles.a}
+                    onMouseEnter={() => handleProject(localDriveBackground, background, messenger, description2, localDrive)}
+                    onMouseOut={() => handleProjectReturn(background, messenger, description2, localDrive)}
                   >
                     Local Drive.
                   </a>

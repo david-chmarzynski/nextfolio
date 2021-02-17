@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-export const handleProject = (messengerBackground, target, link, description) => {
+export const handleProject = (messengerBackground, target, link, description, li) => {
   gsap.to(target, {
     duration: 0,
     background: `url(${messengerBackground}) center center`,
@@ -21,11 +21,20 @@ export const handleProject = (messengerBackground, target, link, description) =>
   });
   gsap.to(description, {
     duration: 0,
+    display: "block"
+  });
+  gsap.to(description, {
+    duration: 0,
+    delay: 0.3,
     opacity: 1
+  });
+  gsap.to(li, {
+    y: -10,
+    duration: 0.3
   });
 };
 
-export const handleProjectReturn = (target, link, description) => {
+export const handleProjectReturn = (target, link, description, li) => {
   gsap.to(target, {
     duration: 0.4,
     opacity: 0
@@ -36,7 +45,16 @@ export const handleProjectReturn = (target, link, description) => {
   });
   gsap.to(description, {
     duration: 0,
+    display: "none"
+  });
+  gsap.to(description, {
+    duration: 0,
+    delay: 0.3,
     opacity: 0
+  });
+  gsap.to(li, {
+    y: 0,
+    duration: 0.3
   });
 };
 
